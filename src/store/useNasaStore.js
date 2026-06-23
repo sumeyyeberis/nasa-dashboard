@@ -19,7 +19,7 @@ const MOCK_DATA = [
   {
     id: 3,
     img_src: "https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?q=80&w=1000&auto=format&fit=crop",
-    title: " (Mock)",
+    title: "Milky Way Stars",
     date: "2023-11-03",
     explanation: "Kendi galaksimiz Samanyolu'nun merkezine doğru uzanan milyonlarca yıldız kümesi."
   },
