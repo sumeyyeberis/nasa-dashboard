@@ -1,16 +1,40 @@
-# React + Vite
+# Aerospace & Astronomy Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern frontend application built to consume and visualize astronomical data using NASA's Open APIs. Designed with a component-based architecture and a futuristic UI.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Live Data Consumption:** Asynchronously fetches high-resolution space imagery and data from the NASA APOD API.
+- **Robust Error Handling (Fallback Mechanism):** Implements a fallback mock data pattern to ensure UI stability and continuous user experience even during API gateway timeouts or 503 Service Unavailable errors.
+- **Live Search & Filtering:** Client-side state management for instant data filtering without unnecessary DOM re-renders.
+- **Responsive & Futuristic UI:** Styled with Tailwind CSS, featuring a dark aerospace theme optimized for all screen sizes.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework:** React + Vite
+- **State Management:** Zustand
+- **Styling:** Tailwind CSS
+- **API:** NASA Open API (APOD)
 
-## Expanding the ESLint configuration
+## Local Installation & Setup
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository:
+   ```
+   git clone [https://github.com/sumeyyeberis/nasa-dashboard.git](https://github.com/sumeyyeberis/nasa-dashboard.git)
+   ```
+2. Navigate to the project directory:
+   ```
+   cd nasa-dashboard
+   ```
+3. Install dependencies:
+   ```
+   npm install
+   ```
+4. Start the development server:
+   ```
+   npm run dev
+   ```
+Architecture & Data Flow
+The application utilizes Zustand for global state management to prevent prop drilling. The data flow is decoupled from the UI components; useNasaStore handles all asynchronous fetch operations, error states, and data formatting (Adapter Pattern) before passing the clean payload to the presentation layer.
+
+Developed by Sümeyye Beriş
